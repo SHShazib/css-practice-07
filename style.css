@@ -1,6 +1,8 @@
 .round-border {
     background-image: url("images/pic5.jpg") no;
+    margin-bottom: 500px;
 }
+
 .round-border div{
     width: 200px;
     height: 200px;
@@ -11,21 +13,62 @@
     box-sizing: border-box;
     padding: 10px;
     text-align: center;
-    box-shadow: 0 10px 10px 0 #111;
     font-size: 20px;
 }
+
+/* --------div */
 .div1{
     background-color: #05c46b;
+    transition: width 1s, height 2s, transform 1s;
 }
+.div1:hover {
+    background-color: #ef5777;
+    transform: rotate(360deg);
+}
+
+/* --------div */
 .div2{
     background-color: #ef5777;
     color: #111;
 }
+.div2:hover {
+    box-shadow: 0 10px 10px 0 #111;
+}
+b
 .div2::after {
     content: "HELLO !!!";
 }
+
+/* --------div */
 .div3{
     background-image: url("images/pic9.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+}
+#animation{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    border: #05c46b solid 4px;
+    position: relative;
+}
+
+#animation .grid {
+    position: absolute;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+    border-radius: 50%;
+    animation: round 5s linear 0s infinite alternate both;
+    transform: rotate(360deg);
+}
+@keyframes round
+ { from{width: 50px;height: 50px;}
+    to{width: 500px;height: 500px;}
 }
